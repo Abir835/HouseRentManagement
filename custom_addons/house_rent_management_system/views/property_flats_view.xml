@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="action_house_location" model="ir.actions.act_window">
-        <field name="name">House Location</field>
+    <record id="action_property_flats" model="ir.actions.act_window">
+        <field name="name">Property Flats</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">house.location</field>
+        <field name="res_model">property.flats</field>
         <field name="view_mode">tree,form,activity</field>
         <field name="context">{}</field>
         <field name="help" type="html">
@@ -13,9 +13,9 @@
         </field>
     </record>
 
-    <menuitem id="house_location_menu"
-              name="House Location"
-              action="action_house_location"
+    <menuitem id="property_flats_menu"
+              name="Property Flats"
+              action="action_property_flats"
               parent="house_rent_management_menu_root"
               sequence="0"/>
 </odoo>
