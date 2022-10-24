@@ -16,5 +16,5 @@
               name="Renter Information"
               action="action_renter_information"
               parent="rent_information_menu_master"
-              sequence="0"/>
+              sequence="1"/>
 </odoo>

@@ -16,6 +16,6 @@
     <menuitem id="property_flats_menu"
               name="Property Flats"
               action="action_property_flats"
-              parent="house_rent_management_menu_root"
-              sequence="0"/>
+              parent="house_information_menu"
+              sequence="2"/>
 </odoo>

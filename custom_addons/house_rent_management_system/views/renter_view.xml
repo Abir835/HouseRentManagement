@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="action_property_renter" model="ir.actions.act_window">
-        <field name="name">Property Renter</field>
+    <record id="action_property_renter_root" model="ir.actions.act_window">
+        <field name="name">Renter</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">property.renter</field>
         <field name="view_mode">tree,form</field>
@@ -12,9 +12,9 @@
             </p>
         </field>
     </record>
-    <menuitem id="property_renter_menu"
-              name="Property"
-              action="action_property_renter"
-              parent="house_rent_management_menu_root"
+    <menuitem id="property_renter_menu_master"
+              name="Renter"
+              action="action_property_renter_root"
+              parent="rent_information_menu_master"
               sequence="0"/>
 </odoo>
