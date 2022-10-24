@@ -6,6 +6,7 @@
     'summary': 'House Rent Management System',
     'depends': [],
     'data': [
+        'security/ir.model.access.csv',
         'views/menu.xml',
         'views/house_location_view.xml',
         'views/renter_information_view.xml',
