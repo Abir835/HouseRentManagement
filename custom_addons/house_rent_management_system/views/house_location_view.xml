@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id="house_location_tree" model="ir.ui.view">
+        <field name="name">house.location.tree</field>
+        <field name="model">house.location</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="address"/>
+            </tree>
+        </field>
+    </record>
+
     <record id="house_location_form" model="ir.ui.view">
         <field name="name">house.location.form</field>
         <field name="model">house.location</field>

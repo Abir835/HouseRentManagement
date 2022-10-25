@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id="renter_tree" model="ir.ui.view">
+        <field name="name">property.renter.tree</field>
+        <field name="model">property.renter</field>
+        <field name="arch" type="xml">
+            <tree>
+
+                <field name="renter_id"/>
+                <field name="flat_id"/>
+            </tree>
+        </field>
+    </record>
+
     <record id="renter_form" model="ir.ui.view">
         <field name="name">property.renter.form</field>
         <field name="model">property.renter</field>
