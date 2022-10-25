@@ -7,8 +7,8 @@ class RenterDetails(models.Model):
     _description = 'Property Renter'
     _rec_name = 'renter_id'
 
-    renter_id = fields.Many2one('renter.information', string='Renter ID')
-    flat_id = fields.Many2one('property.flats', string='Flat ID')
+    renter_id = fields.Many2one('renter.information', string='Renter Name')
+    flat_id = fields.Many2one('property.flats', string='Flat No.')
     # price = fields.Many2one('flat_id.price', string='Price')
     # date = fields.Date(string='Date', default=fields.datetime.now)
 
