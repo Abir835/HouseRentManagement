@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="renter_form" model="ir.ui.view">
+        <field name="name">property.renter.form</field>
+        <field name="model">property.renter</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="renter_id"/>
+                        <field name="flat_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="action_property_renter_root" model="ir.actions.act_window">
         <field name="name">Renter</field>
         <field name="type">ir.actions.act_window</field>

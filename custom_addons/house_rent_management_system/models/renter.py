@@ -1,5 +1,5 @@
 from odoo import api, fields, models
-import datetime
+# import datetime
 
 
 class RenterDetails(models.Model):
@@ -8,5 +8,5 @@ class RenterDetails(models.Model):
 
     renter_id = fields.Many2one('renter.information', string='Renter ID')
     flat_id = fields.Many2one('property.flats', string='Flat ID')
-    price = fields.Many2one('flat_id.price')
-    date = fields.Date(string='Date', default=fields.datetime.now)
+    # price = fields.Many2one('flat_id.price', string='Price')
+    # date = fields.Date(string='Date', default=fields.datetime.now)

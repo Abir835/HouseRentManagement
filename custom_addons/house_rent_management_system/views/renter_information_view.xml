@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="renter_information_form" model="ir.ui.view">
+        <field name="name">renter.information.form</field>
+        <field name="model">renter.information</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="NID"/>
+                        <field name="BOD"/>
+                        <field name="age"/>
+                    </group>
+                    <group>
+                        <field name="family_member"/>
+                        <field name="address"/>
+                        <field name="work_info"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="action_renter_information" model="ir.actions.act_window">
         <field name="name">Renter Information</field>
         <field name="type">ir.actions.act_window</field>

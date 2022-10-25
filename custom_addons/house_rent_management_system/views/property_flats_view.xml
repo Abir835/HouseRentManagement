@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="property_flats_form" model="ir.ui.view">
+        <field name="name">property.flats.form</field>
+        <field name="model">property.flats</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <field name="property_id"/>
+                        <field name="flat_name"/>
+                        <field name="price"/>
+
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="action_property_flats" model="ir.actions.act_window">
         <field name="name">Property Flats</field>
         <field name="type">ir.actions.act_window</field>
