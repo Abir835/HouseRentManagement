@@ -28,6 +28,23 @@
         </field>
     </record>
 
+    <record id="renter_search" model="ir.ui.view">
+        <field name="name">property.renter.search</field>
+        <field name="model">property.renter</field>
+        <field name="arch" type="xml">
+            <search string="Renters">
+                <field name="renter_id"/>
+                <field name="flat_id"/>
+                <separator/>
+                <!--<filter string="Completed" name="filter_completed" domain="[('completed', '=', True)]"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Renter Name" name="renter_id" context="{'group_by': 'renter_id'}"/>
+                    <filter string="Flat ID" name="flat_id" context="{'group_by': 'flat_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
     <record id="action_property_renter_root" model="ir.actions.act_window">
         <field name="name">Renter</field>
         <field name="type">ir.actions.act_window</field>

@@ -43,6 +43,25 @@
         </field>
     </record>
 
+    <record id="renter_information_search" model="ir.ui.view">
+        <field name="name">renter.information.search</field>
+        <field name="model">renter.information</field>
+        <field name="arch" type="xml">
+            <search string="Renters Information">
+                <field name="name"/>
+                <field name="address"/>
+                <field name="NID"/>
+                <separator/>
+                <!--<filter string="Completed" name="filter_completed" domain="[('completed', '=', True)]"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Renter Name" name="name" context="{'group_by': 'name'}"/>
+                    <filter string="Address" name="address" context="{'group_by': 'address'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
     <record id="action_renter_information" model="ir.actions.act_window">
         <field name="name">Renter Information</field>
         <field name="type">ir.actions.act_window</field>
