@@ -7,8 +7,10 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="renter_id"/>
-                <field name="date"/>
-                <field name="state"/>
+                <!--<field name="date"/>-->
+                <field name="month"/>
+                <field name="year"/>
+                <!--<field name="state"/>-->
             </tree>
         </field>
     </record>
@@ -28,7 +30,15 @@
 
                     <group>
                         <field name="renter_id"/>
-                        <field name="date"/>
+                        <field name="renter_phone"/>
+                        <field name="renter_email"/>
+                        <field name="flat_property_location"/>
+                        <field name="flat_property"/>
+                        <field name="property_flat_name"/>
+                        <field name="flat_price"/>
+                        <!--<field name="date"/>-->
+                        <field name="month"/>
+                        <field name="year"/>
                     </group>
 
                 </sheet>
@@ -42,15 +52,31 @@
         <field name="arch" type="xml">
             <search string="Payment Information">
                 <field name="renter_id"/>
-                <field name="date"/>
+                <field name="year"/>
+                <field name="month"/>
+                <!--<field name="date"/>-->
                 <field name="state"/>
                 <separator/>
+
                 <filter string="Paid" name="filter_state_paid" domain="[('state', '=', 'paid')]"/>
                 <filter string="Pending" name="filter_state_pending" domain="[('state', '=', 'pending')]"/>
                 <filter string="Cancelled" name="filter_state_cancelled" domain="[('state', '=', 'cancelled')]"/>
+                <filter string="January" name="january" domain="[('month', '=', 'january')]"/>
+                <filter string="February" name="february" domain="[('month', '=', 'february')]"/>
+                <filter string="March" name="march" domain="[('month', '=', 'march')]"/>
+                <filter string="April" name="april" domain="[('month', '=', 'april')]"/>
+                <filter string="May" name="may" domain="[('month', '=', 'may')]"/>
+                <filter string="June" name="june" domain="[('month', '=', 'june')]"/>
+                <filter string="July" name="july" domain="[('month', '=', 'july')]"/>
+                <filter string="August" name="august" domain="[('month', '=', 'august')]"/>
+                <filter string="September" name="september" domain="[('month', '=', 'september')]"/>
+                <filter string="October" name="october" domain="[('month', '=', 'october')]"/>
+                <filter string="November" name="november" domain="[('month', '=', 'november')]"/>
+                <filter string="December" name="december" domain="[('month', '=', 'december')]"/>
+
                 <group expand="1" string="Group By">
                     <filter string="Renter Name" name="name" context="{'group_by': 'renter_id'}"/>
-                    <filter string="Date" name="date" context="{'group_by': 'date'}"/>
+                    <!--<filter string="Date" name="date" context="{'group_by': 'date'}"/>-->
                     <filter string="State" name="state" context="{'group_by': 'state'}"/>
                 </group>
             </search>

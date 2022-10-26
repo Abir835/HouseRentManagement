@@ -8,6 +8,10 @@
             <tree>
 
                 <field name="renter_id"/>
+                <!--<field name="renter_phone"/>-->
+                <!--<field name="renter_email"/>-->
+                <!--<field name="flat_property_location"/>-->
+                <!--<field name="flat_property"/>-->
                 <field name="flat_id"/>
                 <field name="date"/>
             </tree>
@@ -22,6 +26,10 @@
                 <sheet>
                     <group>
                         <field name="renter_id"/>
+                        <field name="renter_phone"/>
+                        <field name="renter_email"/>
+                        <field name="flat_property_location"/>
+                        <field name="flat_property"/>
                         <field name="flat_id"/>
                         <field name="date"/>
                     </group>
