@@ -7,7 +7,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="renter_id"/>
-                <field name="month"/>
+                <field name="date"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>
@@ -17,16 +18,40 @@
         <field name="model">payment.payment</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button id="button_pending" name="action_pending" string="Pending" class="btn-primary" type="object" states="cancelled,paid"/>
+                    <button id="button_paid" name="action_paid" string="Paid" class="btn-primary" type="object" states="pending,cancelled"/>
+                    <button id="button_cancelled" name="action_cancelled" string="Cancelled" class="btn-primary" type="object" states="pending,paid"/>
+                    <field name="state" widget="statusbar" statusbar_visible="pending,paid"/>
+                </header>
                 <sheet>
 
                     <group>
                         <field name="renter_id"/>
-                        <field name="month"/>
-
+                        <field name="date"/>
                     </group>
 
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="payment_payment_search" model="ir.ui.view">
+        <field name="name">payment.payment.search</field>
+        <field name="model">payment.payment</field>
+        <field name="arch" type="xml">
+            <search string="Payment Information">
+                <field name="renter_id"/>
+                <field name="date"/>
+                <field name="state"/>
+                <separator/>
+                <!--<filter string="State" name="state" domain="[('completed', '=', True)]"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Renter Name" name="name" context="{'group_by': 'renter_id'}"/>
+                    <filter string="Date" name="date" context="{'group_by': 'date'}"/>
+                    <filter string="State" name="state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
         </field>
     </record>
 
