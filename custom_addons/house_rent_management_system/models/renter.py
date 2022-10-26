@@ -10,7 +10,8 @@ class RenterDetails(models.Model):
 
     renter_id = fields.Many2one('renter.information', string='Renter Name')
     flat_id = fields.Many2one('property.flats', string='Flat No.')
-    date = fields.Datetime(string="Date", default=lambda *a: datetime.now())
+    date = fields.Date(string="Date")
+    # date = fields.Datetime(string="Date", default=lambda *a: datetime.now())
 
     @api.onchange('flat_id')
     def if_already_rented(self):

@@ -1,5 +1,6 @@
-from odoo import fields, models, api
 from datetime import datetime
+from odoo import fields, models, api
+
 
 class Payment(models.Model):
     _name = 'payment.payment'
@@ -7,7 +8,8 @@ class Payment(models.Model):
     _rec_name = 'renter_id'
 
     renter_id = fields.Many2one('property.renter', string='Renter Name')
-    date = fields.Datetime(string="Date", default=lambda *a: datetime.now())
+    # date = fields.Datetime(string="Date", default=lambda *a: datetime.now())
+    date = fields.Date(string="Date")
 
     state = fields.Selection([
         ('pending', "Pending"),
