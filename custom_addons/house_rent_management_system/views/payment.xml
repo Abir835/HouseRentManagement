@@ -45,7 +45,9 @@
                 <field name="date"/>
                 <field name="state"/>
                 <separator/>
-                <!--<filter string="State" name="state" domain="[('completed', '=', True)]"/>-->
+                <filter string="Paid" name="filter_state_paid" domain="[('state', '=', 'paid')]"/>
+                <filter string="Pending" name="filter_state_pending" domain="[('state', '=', 'pending')]"/>
+                <filter string="Cancelled" name="filter_state_cancelled" domain="[('state', '=', 'cancelled')]"/>
                 <group expand="1" string="Group By">
                     <filter string="Renter Name" name="name" context="{'group_by': 'renter_id'}"/>
                     <filter string="Date" name="date" context="{'group_by': 'date'}"/>
