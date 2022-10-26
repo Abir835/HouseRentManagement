@@ -1,3 +1,4 @@
+from datetime import datetime
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
@@ -11,11 +12,12 @@ class RenterDetails(models.Model):
     flat_id = fields.Many2one('property.flats', string='Flat No.')
     # price = fields.Many2one('flat_id.price', string='Price')
     # date = fields.Date(string='Date', default=fields.datetime.now)
+    date = fields.Datetime(string="Date", default=lambda *a: datetime.now())
 
     @api.onchange('flat_id')
     def if_already_rented(self):
         if self.flat_id:
-            print('hello',self.flat_id)
+
             flat = self.env['property.renter'].search([('flat_id', '=', self.flat_id.id)])
             if flat:
                 raise ValidationError('Flat Already Rented')

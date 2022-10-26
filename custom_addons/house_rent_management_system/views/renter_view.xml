@@ -9,6 +9,7 @@
 
                 <field name="renter_id"/>
                 <field name="flat_id"/>
+                <field name="date"/>
             </tree>
         </field>
     </record>
@@ -22,6 +23,7 @@
                     <group>
                         <field name="renter_id"/>
                         <field name="flat_id"/>
+                        <field name="date"/>
                     </group>
                 </sheet>
             </form>
@@ -35,11 +37,13 @@
             <search string="Renters">
                 <field name="renter_id"/>
                 <field name="flat_id"/>
+                <field name="date"/>
                 <separator/>
                 <!--<filter string="Completed" name="filter_completed" domain="[('completed', '=', True)]"/>-->
                 <group expand="1" string="Group By">
                     <filter string="Renter Name" name="renter_id" context="{'group_by': 'renter_id'}"/>
                     <filter string="Flat ID" name="flat_id" context="{'group_by': 'flat_id'}"/>
+                    <filter string="Date" name="date" context="{'group_by': 'date'}"/>
                 </group>
             </search>
         </field>
