@@ -75,7 +75,7 @@ class Payment(models.Model):
                 self.property_flat_name = flat_.flat_name
 
     @api.onchange('renter_id')
-    def _get_flat_name(self):
+    def _get_flat_price(self):
         price_id = self.renter_id
         for price_ in price_id.flat_id:
             if price_.price:
