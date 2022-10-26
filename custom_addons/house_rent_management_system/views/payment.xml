@@ -10,7 +10,7 @@
                 <!--<field name="date"/>-->
                 <field name="month"/>
                 <field name="year"/>
-                <!--<field name="state"/>-->
+                <field name="state"/>
             </tree>
         </field>
     </record>
