@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class Property(models.Model):
@@ -18,6 +19,6 @@ class Property(models.Model):
             manager_name = man_id.name
             manager = self.env['property.property'].search([('manager_id', '=', self.manager_id.id)])
             if manager:
-                raise ValueError(f"{manager_name}This manager is already occupied")
+                raise ValidationError(f"{manager_name} manager is already occupied")
 
 
