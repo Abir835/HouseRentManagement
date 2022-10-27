@@ -24,6 +24,8 @@
                     <group>
                         <field name="property_id"/>
                         <field name="flat_name"/>
+                        <field name="flat_capacity"/>
+                        <field name="flat_created"/>
                         <field name="price"/>
 
                     </group>

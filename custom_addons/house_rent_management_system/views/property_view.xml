@@ -9,6 +9,7 @@
                 <field name="location_id"/>
                 <field name="property_name"/>
                 <field name="manager_id"/>
+                <field name="total_flat"/>
             </tree>
         </field>
     </record>
@@ -24,6 +25,7 @@
                         <field name="location_id"/>
                         <field name="property_name"/>
                         <field name="manager_id"/>
+                        <field name="total_flat"/>
 
                     </group>
 
@@ -40,6 +42,7 @@
                 <field name="location_id"/>
                 <field name="property_name"/>
                 <field name="manager_id"/>
+                <field name="total_flat"/>
                 <separator/>
                 <!--<filter string="Completed" name="filter_completed" domain="[('completed', '=', True)]"/>-->
                 <group expand="1" string="Group By">
