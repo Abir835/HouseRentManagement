@@ -8,6 +8,7 @@
             <tree>
                 <field name="location_id"/>
                 <field name="property_name"/>
+                <field name="manager_id"/>
             </tree>
         </field>
     </record>
@@ -22,6 +23,7 @@
                     <group>
                         <field name="location_id"/>
                         <field name="property_name"/>
+                        <field name="manager_id"/>
 
                     </group>
 
@@ -37,6 +39,7 @@
             <search string="Property">
                 <field name="location_id"/>
                 <field name="property_name"/>
+                <field name="manager_id"/>
                 <separator/>
                 <!--<filter string="Completed" name="filter_completed" domain="[('completed', '=', True)]"/>-->
                 <group expand="1" string="Group By">
