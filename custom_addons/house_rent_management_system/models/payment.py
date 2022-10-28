@@ -7,14 +7,14 @@ class Payment(models.Model):
     _description = 'Payment Information'
     _rec_name = 'renter_id'
 
-    renter_id = fields.Many2one('property.renter', string='Renter Name')
+    renter_id = fields.Many2one('property.renter', string='Renter Name', required=True)
     # date = fields.Datetime(string="Date", default=lambda *a: datetime.now())
     # date = fields.Date(string="Date")
-    year = fields.Char(string='Year')
+    year = fields.Char(string='Year', required=True)
     month = fields.Selection([('january', 'January'), ('february', 'February'), ('march', 'March'), ('april', 'April'),
                               ('may', 'May'), ('june', 'June'), ('july', 'July'), ('august', 'August'),
                               ('september', 'September'), ('october', 'October'), ('november', 'November'),
-                              ('december', 'December')])
+                              ('december', 'December')], required=True)
 
     renter_phone = fields.Char(string='Phone', readonly=True, compute='_get_phone')
     renter_email = fields.Char(string='Email', readonly=True, compute='_get_email')

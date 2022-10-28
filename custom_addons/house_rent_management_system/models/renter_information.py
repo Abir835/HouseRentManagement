@@ -7,14 +7,14 @@ class RenterInformation(models.Model):
     _name = 'renter.information'
     _description = 'Renter Information'
 
-    name = fields.Char(string='Renter Name')
+    name = fields.Char(string='Renter Name', required=True)
     age = fields.Char(string='Age', compute="_get_age")
     NID = fields.Char(string='NID')
     BOD = fields.Date(string="BOD.")
     family_member = fields.Char(string='Family Member')
     address = fields.Text(string='Address')
     work_info = fields.Text(string='Work info.')
-    phone = fields.Char(string='Phone')
+    phone = fields.Char(string='Phone', required=True)
     email = fields.Char(string='Email')
 
     @api.onchange('BOD')

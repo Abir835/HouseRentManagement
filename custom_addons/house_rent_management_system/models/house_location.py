@@ -6,4 +6,4 @@ class HouseLocation(models.Model):
     _description = "House Location"
     _rec_name = 'address'
 
-    address = fields.Text(string="Address")
+    address = fields.Text(string="Address", required=True)

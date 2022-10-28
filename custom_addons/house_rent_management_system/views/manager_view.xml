@@ -62,7 +62,7 @@
         </field>
     </record>
     <menuitem id="manager_menu"
-              name="Manager"
+              name="Manager Info."
               action="action_manager"
               parent="house_rent_management_menu_root"
               sequence="1"/>

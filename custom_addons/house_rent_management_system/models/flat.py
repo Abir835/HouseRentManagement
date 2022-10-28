@@ -7,9 +7,9 @@ class FlatDetails(models.Model):
     _description = 'Property Flats'
     _rec_name = 'flat_name'
 
-    property_id = fields.Many2one('property.property', string='Property Name')
-    flat_name = fields.Char(string='Flats Name')
-    price = fields.Float(string='Rent Price')
+    property_id = fields.Many2one('property.property', string='Property Name', required=True)
+    flat_name = fields.Char(string='Flats Name', required=True)
+    price = fields.Float(string='Rent Price', required=True)
     flat_capacity = fields.Integer(string='Flat Capacity', readonly=True)
     flat_created = fields.Integer(string='Flat Created', readonly=True)
     # constrains from validation raise error

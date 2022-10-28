@@ -6,8 +6,8 @@ class ManagerDetails(models.Model):
     _description = 'Manager Details'
     _rec_name = 'name'
 
-    name = fields.Char(string='Name')
+    name = fields.Char(string='Name', required=True)
     NID = fields.Char(string='NID')
-    phone = fields.Char(string='Phone')
+    phone = fields.Char(string='Phone', required=True)
     email = fields.Char(string='Email')
-    address = fields.Char(string='Address')
+    address = fields.Char(string='Address', required=True)
